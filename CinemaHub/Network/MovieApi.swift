@@ -9,7 +9,7 @@ enum MovieApi {
 }
 
 extension MovieApi: TargetType {
-    
+ 
     var baseURL: URL {
         guard let url = URL(string: "https://api.themoviedb.org/3/movie/") else { fatalError("baseURL could not be configured") }
         return url
@@ -57,4 +57,12 @@ extension MovieApi: TargetType {
             return .request
         }
     }
+    
+    var sampleData: Data {
+        return Data()
+    }
+    
+    
+    
+    
 }
